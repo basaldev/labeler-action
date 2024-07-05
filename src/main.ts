@@ -18,20 +18,20 @@ const labelsToRemove = core
  * @returns issue/card/pr number if not provided by user.
  */
 function getIssueNumber(
-  _core: typeof import('@actions/core'),
-  _context: typeof github.context
+  core: typeof import('@actions/core'),
+  context: typeof github.context
 ): string | undefined {
-  let issueNumber = _core.getInput('issue-number');
+  let issueNumber = core.getInput('issue-number');
 
   if (issueNumber) return issueNumber;
 
-  issueNumber = _context.payload.issue?.number?.toString() || '';
+  issueNumber = context.payload.issue?.number?.toString() || '';
   if (issueNumber) return issueNumber;
 
-  issueNumber = _context.payload.pull_request?.number?.toString() || '';
+  issueNumber = context.payload.pull_request?.number?.toString() || '';
   if (issueNumber) return issueNumber;
 
-  const cardUrl = _context.payload.project_card?.content_url;
+  const cardUrl = context.payload.project_card?.content_url;
   issueNumber = cardUrl?.split('/').pop();
 
   return issueNumber;
@@ -113,10 +113,9 @@ export async function run() {
   try {
     const result = await label();
     console.log(result);
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   } finally {
     process.exit();
   }
-
 }
