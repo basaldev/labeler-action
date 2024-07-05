@@ -2,7 +2,6 @@
   "name": "labeler-action",
   "version": "2.0.0",
   "description": "Labels issues when they land in a repo.",
-  "main": "label.js",
   "private": true,
   "exports": {
     ".": "./dist/index.js"
