@@ -1,6 +1,6 @@
 {
-  "name": "labeler",
-  "version": "1.0.4",
+  "name": "labeler-action",
+  "version": "1.0.0",
   "description": "Labels issues when they land in a repo.",
   "main": "label.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andymckay/labeler.git"
+    "url": "git+https://github.com/basaldev/labeler-action.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andymckay/labeler/issues"
+    "url": "https://github.com/basaldev/labeler-action/issues"
   },
-  "homepage": "https://github.com/andymckay/labeler#readme",
+  "homepage": "https://github.com/basaldev/labeler-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^1.0.1",
