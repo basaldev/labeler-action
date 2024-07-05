@@ -20,6 +20,9 @@ inputs:
   issue-number:
     description: "An issue number or PR number or project card number. Optional, if not specified, will use the one available in github event `github.event.pull_request` or `github.event.issue`"
     required: false
+  enterprise-url:
+    description: "GitHub Enterprise URL"
+    required: false
 branding:
   icon: zap-off
   color: orange
