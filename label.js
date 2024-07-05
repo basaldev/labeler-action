@@ -44,6 +44,11 @@ async function label() {
   const ignoreIfAssigned = core.getInput("ignore-if-assigned");
   const ignoreIfLabeled = core.getInput("ignore-if-labeled");
   const enterpriseUrl = core.getInput("enterprise-url");
+
+  if (enterpriseUrl) {
+    console.log("Using enterpriseUrl: ", enterpriseUrl);
+  }
+
   const octokit = enterpriseUrl
     ? new github.GitHub(myToken, {
         baseUrl: `${enterpriseUrl}/api/v3`

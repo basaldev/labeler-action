@@ -23,6 +23,7 @@ inputs:
   enterprise-url:
     description: "GitHub Enterprise URL"
     required: false
+    default: ''
 branding:
   icon: zap-off
   color: orange
