@@ -1,4 +1,6 @@
-Automatically adds or removes labels from issues, pull requests and project cards.
+# basaldev/labeler-action
+
+| Automatically adds or removes labels from issues, pull requests and project cards.
 
 
 ## Supported Github events
@@ -37,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: initial labeling
-        uses: andymckay/labeler@master
+        uses: basaldev/labeler-action@master
         with:
           add-labels: "needs-triage, bug"
           remove-labels: "in progress"
@@ -72,7 +74,7 @@ jobs:
   automate-issues-labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: andymckay/labeler@master
+      - uses: basaldev/labeler-action@master
         with:
           remove-labels: "help-wanted"
           ignore-if-assigned: false
@@ -95,8 +97,35 @@ jobs:
   automate-issues-labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: andymckay/labeler@1.0.2
+      - uses: basaldev/labeler-action@1.0.2
         with:
           add-labels: "needs-triage"
           ignore-if-labeled: true
+```
+## enterprise-url
+
+The parameter enterprise-url allows you to specify your GitHub Enterprise URL. If provided, the action will use this URL for API requests instead of the default github.com.
+An example use-case would be, to run the action in a GitHub Enterprise environment. For this, the workflow file would look like:
+
+```yaml
+name: issue-automation
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+  project_card:
+    types: [moved]
+
+jobs:
+  automate-issues-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: initial labeling
+        uses: basaldev/labeler-action@master
+        with:
+          add-labels: "needs-triage, bug"
+          remove-labels: "in progress"
+          enterprise-url: "https://github.your-enterprise.com"
 ```
