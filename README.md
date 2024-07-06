@@ -1,8 +1,8 @@
 # basaldev/labeler-action
 
-![CI](https://github.com/basaldev/labeler-action/workflows/ci.yml/badge.svg)
-[![Check dist/](https://github.com/basaldev/labeler-action/workflows/check-dist.yml/badge.svg)](https://github.com/basaldev/labeler-action/workflows/check-dist.yml)
-[![CodeQL](https://github.com/basaldev/labeler-action/workflows/codeql-analysis.yml/badge.svg)](https://github.com/basaldev/labeler-action/workflows/codeql-analysis.yml)
+![CI](https://github.com/basaldev/labeler-action/actions/workflows/ci.yml/badge.svg)
+[![Check dist/](https://github.com/basaldev/labeler-action/actions/workflows/check-dist.yml/badge.svg)](https://github.com/basaldev/labeler-action/actions/workflows/check-dist.yml)
+[![CodeQL](https://github.com/basaldev/labeler-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/basaldev/labeler-action/actions/workflows/codeql-analysis.yml)
 [![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
 | Automatically adds or removes labels from issues, pull requests and project
